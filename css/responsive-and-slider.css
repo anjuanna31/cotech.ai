@@ -494,8 +494,8 @@
     right: 0 !important;
   }
   #shape-1, #shape-2, #shape-3 {
-    min-width: 150px;
-        height: 150px;
+    min-width: 120px;
+        height: 120px;
         mix-blend-mode: multiply;
         filter: blur(23px);
         opacity: 0.6;
@@ -953,6 +953,15 @@
   justify-content: center;
   border-radius: 20px;
   background-color: #0000007d;
+  padding: 10px!important;
+}
+.feature-hero-content h2 {
+  font: normal normal 800 28px / 36px Poppins;
+  letter-spacing: 0px;
+  color: #f0f0f0;
+  margin-bottom: 5px;
+  max-width: 550px;
+  margin: 5px auto;
 }
 .slideimg {
       

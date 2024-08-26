@@ -1302,7 +1302,8 @@
     left: 208px !important;
   }
   .footer-menu a {
-    padding: 9px 0px 3px 25px;
+    padding: 9px 10px 3px 10px;
+}
   }
   .footer .row {
     display: inline-flex;
