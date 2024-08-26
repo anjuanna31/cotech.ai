@@ -523,6 +523,15 @@
     height: auto;
     max-height: 100%;
 }
+.footer .row {
+  display: inline-flex;
+  flex-direction: column-reverse;
+}
+.copy-right {
+  padding: 10px 0px 20px 0px;
+  color: #717171;
+  font: normal normal normal 13px / 20px Poppins;
+}
   .hero-box {
     /* height: calc(100vh - 125px); */
     height: calc((var(--vh, 1vh) * 100) - 125px);

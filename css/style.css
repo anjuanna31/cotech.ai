@@ -1053,7 +1053,7 @@ object-fit: cover;
     flex-direction: column;
   }
   .emailsection {
-    width: 100% !important;
+    /* width: 100% !important; */
   }
   .featurestep .step-box {
     height: 204px;
@@ -1067,6 +1067,9 @@ object-fit: cover;
   width: 100%;
   margin-left: 0px !important;
   margin-top: 0;
+}
+.kk{
+  padding: 0px 15px;
 }
 .about-hero {
   background: #fff1e4 0% 0% no-repeat padding-box;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cotech</title>
     <link rel="shortcut icon" href="./img/favicon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/responsive-and-slider.css">
     <link rel="stylesheet" href="./css/style.css" />
@@ -170,105 +170,105 @@
     </div>
 
     <footer>
-        <div class="footer-info footer-info2 demofoot">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="./img/footer-logo.svg" class="footer-logo" alt="" />
-                        <h4>AI Copilot for service technicians</h4>
-                        <p>
-                            Empowering service technicians with AR-enabled automotive
-                            maintenance and inspection.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Visit us at</h4>
-                        <div class="social-media">
-                            <a target="_blank" href="https://www.facebook.com/people/XRmeet/100063979573184/">
-                              <img src="./img/sc-media-1.svg" alt="">
-                              <img src="./img/sc-media-11.svg" class="sc-hide" alt="">
-                            </a>
-                            <a target="_blank" href="">
-                              <img src="./img/sc-media-2.svg" alt="">
-                              <img src="./img/sc-media-22.svg" class="sc-hide" alt="">
-                            </a>
-                            <a target="_blank" href="https://x.com/i/flow/login?redirect_after_login=%2FXrMeet">
-                              <img src="./img/sc-media-3.svg" alt="">
-                              <img src="./img/sc-media-33.svg" class="sc-hide" alt="">
-                            </a>
-                            <a target="_blank" href="https://www.linkedin.com/company/cotechai/">
-                              <img src="./img/sc-media-4.svg" alt="">
-                              <img src="./img/sc-media-44.svg" class="sc-hide" alt="">
-                            </a>
-                          </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Get the latest CoTech.ai news</h4>
-                        <div class="relative">
-                           
-                            <!--  -->
-                            <input type="email" autocomplete="off" class="form-contro emailsection "
-                                id="exampleInputEmail1" placeholder="Your email here">
-
-                            <!-- invalid -->
-                            <p class="error_sub" id="error2" style="display: none;">
-                                <svg  class="subscribeClose" id="cancel_1_" data-name="cancel (1)" xmlns="http://www.w3.org/2000/svg" width="18"
-                                    height="18" viewBox="0 0 18 18">
-                                    <circle id="Ellipse_6" data-name="Ellipse 6" cx="9" cy="9" r="9"
-                                        transform="translate(0 0)" fill="#e24c4b"></circle>
-                                    <path id="Path_15425" data-name="Path 15425"
-                                        d="M125.8,125.8a.883.883,0,0,1-1.238,0l-2.869-2.869-2.869,2.869a.875.875,0,1,1-1.238-1.238l2.869-2.869-2.869-2.869a.875.875,0,1,1,1.238-1.238l2.869,2.869,2.869-2.869a.875.875,0,1,1,1.238,1.238l-2.869,2.869,2.869,2.869A.883.883,0,0,1,125.8,125.8Z"
-                                        transform="translate(-112.693 -112.693)" fill="#fff"></path>
-                                </svg>
-                                <span id="error_text">Please enter a valid email address.</span>
-                            </p>
-
-                            <!-- success -->
-                            <p class="succ_sub g" id="subscribe" style="display: none;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                    <path id="check"
-                                        d="M10,20A10,10,0,1,0,0,10,10.011,10.011,0,0,0,10,20Zm5.653-12.44-6.4,6.4a1.071,1.071,0,0,1-1.515,0l-3.4-3.4A1.071,1.071,0,0,1,5.862,9.044L8.5,11.681l5.638-5.638a1.071,1.071,0,0,1,1.515,1.515Z"
-                                        transform="translate(0 0.001)" fill="#30945e" fill-rule="evenodd" />
-                                </svg>
-                                <span id="succ_text">Success! You're now subscribed.</span>
-                            </p>
-
-                            <!-- already subscribed -->
-                            <p class="succ_sub g" id="alreadysub" style="display: none;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                    <path id="check"
-                                        d="M10,20A10,10,0,1,0,0,10,10.011,10.011,0,0,0,10,20Zm5.653-12.44-6.4,6.4a1.071,1.071,0,0,1-1.515,0l-3.4-3.4A1.071,1.071,0,0,1,5.862,9.044L8.5,11.681l5.638-5.638a1.071,1.071,0,0,1,1.515,1.515Z"
-                                        transform="translate(0 0.001)" fill="#30945e" fill-rule="evenodd" />
-                                </svg>
-                                <span id="succ_text">You're already subscribed.</span>
-                            </p>
-
-                            <div class="subcr" onclick="subscribe()">Subscribe</div>
-                            <div class="subcr" style="display: none;"><span class="loader"></span></div>
-                        </div>
-                    </div>
+        <div class="footer-info">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="./img/footer-logo.svg" class="footer-logo" alt="" />
+                <h4>AI Copilot for service technicians</h4>
+                <p>
+                  Empowering service technicians with AR-enabled automotive
+                  maintenance and inspection.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <h4>Visit us at</h4>
+                <div class="social-media">
+                  <a target="_blank" href="https://www.facebook.com/people/XRmeet/100063979573184/">
+                    <img src="./img/sc-media-1.svg" alt="">
+                    <img src="./img/sc-media-11.svg" class="sc-hide" alt="">
+                  </a>
+                  <a target="_blank" href="">
+                    <img src="./img/sc-media-2.svg" alt="">
+                    <img src="./img/sc-media-22.svg" class="sc-hide" alt="">
+                  </a>
+                  <a target="_blank" href="https://x.com/i/flow/login?redirect_after_login=%2FXrMeet">
+                    <img src="./img/sc-media-3.svg" alt="">
+                    <img src="./img/sc-media-33.svg" class="sc-hide" alt="">
+                  </a>
+                  <a target="_blank" href="https://www.linkedin.com/company/cotechai/">
+                    <img src="./img/sc-media-4.svg" alt="">
+                    <img src="./img/sc-media-44.svg" class="sc-hide" alt="">
+                  </a>
                 </div>
+              </div>
+              <div class="col-md-4">
+                <h4>Get the latest CoTech.ai news</h4>
+                <div class="relative">
+                             
+                  <!--  -->
+                  <input type="email" autocomplete="off" class="form-control emailsection"
+                      id="exampleInputEmail1" placeholder="Your email here">
+  
+                  <!-- invalid -->
+                  <p class="error_sub" id="error2" style="display: none;">
+                      <svg class="subscribeClose" class="subscribeClose" id="cancel_1_" data-name="cancel (1)" xmlns="http://www.w3.org/2000/svg" width="18"
+                          height="18" viewBox="0 0 18 18">
+                          <circle id="Ellipse_6" data-name="Ellipse 6" cx="9" cy="9" r="9"
+                              transform="translate(0 0)" fill="#e24c4b"></circle>
+                          <path id="Path_15425" data-name="Path 15425"
+                              d="M125.8,125.8a.883.883,0,0,1-1.238,0l-2.869-2.869-2.869,2.869a.875.875,0,1,1-1.238-1.238l2.869-2.869-2.869-2.869a.875.875,0,1,1,1.238-1.238l2.869,2.869,2.869-2.869a.875.875,0,1,1,1.238,1.238l-2.869,2.869,2.869,2.869A.883.883,0,0,1,125.8,125.8Z"
+                              transform="translate(-112.693 -112.693)" fill="#fff"></path>
+                      </svg>
+                      <span id="error_text">Please enter a valid email address.</span>
+                  </p>
+  
+                  <!-- success -->
+                  <p class="succ_sub g" id="subscribe" style="display: none;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                          <path id="check"
+                              d="M10,20A10,10,0,1,0,0,10,10.011,10.011,0,0,0,10,20Zm5.653-12.44-6.4,6.4a1.071,1.071,0,0,1-1.515,0l-3.4-3.4A1.071,1.071,0,0,1,5.862,9.044L8.5,11.681l5.638-5.638a1.071,1.071,0,0,1,1.515,1.515Z"
+                              transform="translate(0 0.001)" fill="#30945e" fill-rule="evenodd" />
+                      </svg>
+                      <span id="succ_text">Success! You're now subscribed.</span>
+                  </p>
+  
+                  <!-- already subscribed -->
+                  <p class="succ_sub g" id="alreadysub" style="display: none;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                          <path id="check"
+                              d="M10,20A10,10,0,1,0,0,10,10.011,10.011,0,0,0,10,20Zm5.653-12.44-6.4,6.4a1.071,1.071,0,0,1-1.515,0l-3.4-3.4A1.071,1.071,0,0,1,5.862,9.044L8.5,11.681l5.638-5.638a1.071,1.071,0,0,1,1.515,1.515Z"
+                              transform="translate(0 0.001)" fill="#30945e" fill-rule="evenodd" />
+                      </svg>
+                      <span id="succ_text">You're already subscribed.</span>
+                  </p>
+  
+                  <div class="subcr" onclick="subscribe()">Subscribe</div>
+                  <div class="subcr" style="display: none;"><span class="loader"></span></div>
+              </div>
+              </div>
             </div>
+          </div>
         </div>
         <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="copy-right">
-                            © 2024, iBoson Innovations Pvt Ltd. All Rights Reserved.
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="footer-menu">
-                            <a href="./terms.html">Terms of use</a>
-                            <a href="./privacy_policy.html">Privacy policy</a>
-                            <a href="./gdpr.html">GDPR</a>
-                        </div>
-                    </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="copy-right">
+                  © 2024, iBoson Innovations Pvt Ltd. All Rights Reserved.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <div class="footer-menu">
+                  <a href="./terms.html">Terms of use</a>
+                  <a href="./privacy_policy.html">Privacy policy</a>
+                  <a href="./gdpr.html">GDPR</a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
+      </footer>
 </body>
 <script src="./js/main.js"></script>
 <script src="./js/demo.js"></script>

@@ -1307,8 +1307,8 @@
   }
   .footer .row {
     display: inline-flex;
-    flex-direction: column-reverse;
-  }
+    flex-direction: row;
+}
   .copy-right {
     font: normal normal normal 11px / 51px Poppins;
   }
@@ -1321,7 +1321,7 @@
   .scroll-div-new .slideshow-container {
     height: 755px;
     overflow-x: auto;
-    display: inline-flex;
+    /* display: inline-flex; */
   }
   .scroll-div-new {
     overflow-y: unset !important;
