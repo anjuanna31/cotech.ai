@@ -17,7 +17,8 @@ function menu() {
 const items = document.querySelectorAll("#acordian1 button");
 const items2 = document.querySelectorAll("#acordian2 button");
 const items3 = document.querySelectorAll("#acordian3 button");
-
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 function toggleAccordion() {
   const itemToggle = this.getAttribute("aria-expanded");
 
