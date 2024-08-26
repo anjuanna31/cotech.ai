@@ -519,7 +519,8 @@
     margin-top: 30px;
   }
   .hero-box {
-    height: calc(100vh - 125px);
+    /* height: calc(100vh - 125px); */
+    height: calc((var(--vh, 1vh) * 100) - 125px);
     background-color: black;
     margin-top: 89px;
     border-radius: 9px;
