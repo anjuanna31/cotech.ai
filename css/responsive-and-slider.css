@@ -968,5 +968,10 @@
         bottom: 0px;
         max-width: max-content;
     }
+    #shape-1, #shape-2, #shape-3 {
+      min-width: 130px;
+      height: 150px;
+     
+  }
   
   }
