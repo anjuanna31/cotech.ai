@@ -1273,7 +1273,7 @@
   .accordion button .icon {
     display: inline-block;
     position: absolute;
-    top: 55px;
+    top: 20px;
     right: 1px;
   }
   .accordion button[aria-expanded="true"] + .accordion-content {
@@ -1288,7 +1288,7 @@
     font: normal normal normal 16px / 25px Poppins;
   }
   .emailsection {
-    width: 100% !important;
+    /* width: 100% !important; */
     padding-right: 165px;
   }
   .aiassist-bg {
