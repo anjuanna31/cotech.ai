@@ -1255,7 +1255,7 @@
   .feature-video img {
     object-fit: cover;
     position: relative;
-    border-radius: 25px;
+    border-radius: 0px;
   }
   .heading-36 p {
     width: auto;

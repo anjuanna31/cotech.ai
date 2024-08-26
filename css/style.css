@@ -1053,7 +1053,7 @@ object-fit: cover;
     flex-direction: column;
   }
   .emailsection {
-    width: 48% !important;
+    width: 100% !important;
   }
   .featurestep .step-box {
     height: 204px;
@@ -1088,7 +1088,7 @@ object-fit: cover;
   padding: 0px;
 }
   .demofoot .subcr {
-    left: 148px !important;
+    /* left: 148px !important; */
   }
   .lengthy {
     width: 116% !important;

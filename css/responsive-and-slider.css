@@ -314,7 +314,7 @@
       padding: 20px;
       display: none;
       backdrop-filter: blur(25px);
-      background-color: rgb(255 255 255 / 59%);
+      background-color: rgb(255 255 255 / 79%);
     }
     .header {
       position: fixed;
@@ -927,6 +927,7 @@
   }
   .feature-cont {
     margin-top: 0;
+    border-radius: 0px;
 }
 .aiassist-bg {
   height: auto;
