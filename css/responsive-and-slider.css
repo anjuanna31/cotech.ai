@@ -351,7 +351,8 @@
       margin-top: -50px;
     }
     .feature-video {
-      height: calc(100vh - 115px)!important;
+      /* height: calc(100vh - 115px)!important; */
+      height: calc((var(--vh, 1vh) * 100) - 115px)!important;
     }
     .head-main h2 {
       font: normal normal 800 26px / 38px Poppins!important;
