@@ -518,6 +518,10 @@
   .mobileres-slider{
     margin-top: 30px;
   }
+  .aiassist-bg img {
+    height: auto;
+    max-height: 100%;
+}
   .hero-box {
     /* height: calc(100vh - 125px); */
     height: calc((var(--vh, 1vh) * 100) - 125px);
