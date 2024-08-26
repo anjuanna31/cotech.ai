@@ -971,7 +971,7 @@ object-fit: cover;
   }
   .mpiimages {
     margin-left: 0;
-    height: 100% !important;
+    height: auto !important;
     margin-bottom: 0;
 }
   .feat .endtoend {
@@ -996,7 +996,7 @@ object-fit: cover;
     margin-top: -61px;
   }
       .bg-videompi {
-        height: 355px !important;
+        height: auto !important;
     }
     .first-section {
       margin-bottom: 0px;
