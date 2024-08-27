@@ -749,7 +749,17 @@ a:hover{
   background-color: #f4f5fb;
   justify-content: center;
 }
-
+.user-area {
+  padding-right: 20px;
+  font: normal normal normal 16px / 25px Poppins;
+  padding-left: 15px;
+  outline: none;
+  background: #F3F3F4 0% 0% no-repeat padding-box;
+  border: 1px solid #DFDFDF;
+  border-radius: 6px;
+  height: auto;
+  width: 100%;
+}
 .div-center {
   display: flex;
   align-items: center;
