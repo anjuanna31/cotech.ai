@@ -381,7 +381,7 @@
                             <p class="core-p">Our core values guide everything we do. </p>
                             <div class="accordion"  id="acordian1">
                                 <div class="accordion-item accordion-iteminnov fadeup">
-                                    <button data-image-src="https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/new-images/innovation.png" id="accordion-button-1"
+                                    <button data-image-src="https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/compressed-images/Group+12743-min.png" id="accordion-button-1"
                                         aria-expanded="true"><span class="accordion-title">Innovation</span></button>
                                     <div class="accordion-content">
                                         <p>We embrace innovation as the driving force behind our solutions, constantly
@@ -389,7 +389,7 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item accordion-iteminnov fadeup">
-                                    <button data-image-src="https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/new-images/integrity.png" id="accordion-button-2"
+                                    <button data-image-src="https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/compressed-images/Group+12701-min.png" id="accordion-button-2"
                                         aria-expanded="false"><span class="accordion-title">Integrity</span></button>
                                     <div class="accordion-content">
                                         <p>We uphold the highest standards of integrity in all our interactions,
@@ -397,7 +397,7 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item accordion-iteminnov fadeup">
-                                    <button data-image-src="https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/new-images/custfocus.png" id="accordion-button-3"
+                                    <button data-image-src="https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/compressed-images/Group+12699-min.png" id="accordion-button-3"
                                         aria-expanded="false"><span class="accordion-title">Customer Focus
                                         </span></button>
                                     <div class="accordion-content">
@@ -544,7 +544,15 @@
                 button.addEventListener('click', function () {
                     const imageSrc = this.getAttribute('data-image-src');
                     console.log("Changing image src to:", imageSrc);
+                    imageElement.classList.remove("zoomin");
                     imageElement.src = imageSrc;
+                    void imageElement.offsetWidth;
+
+                    imageElement.onload = () => {
+                    
+                        imageElement.classList.add("zoomin");
+                    // 500 milliseconds = 0.5 seconds
+                    };
                     if (imageSrc) {
                         if (imageSrc == 'https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/new-images/integrity.png') {
                             imageElement.classList.add('predictive');
