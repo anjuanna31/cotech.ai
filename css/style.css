@@ -1107,6 +1107,9 @@ object-fit: cover;
   .footer-info2 {
     margin-top: 20px;
 }
+.footer-info .container{
+  padding: 0px;
+}
 .first-section {
   margin-bottom: 0px;
   height: auto;

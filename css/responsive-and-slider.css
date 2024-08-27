@@ -542,6 +542,11 @@
     position: relative;
     margin-bottom: 30px;
 }
+.relative {
+  position: relative;
+  max-width: 363px;
+  margin: auto;
+}
   }
   .menu-open {
     display: block;
@@ -740,8 +745,9 @@
     }
    
     .subcr {
-      left: 410px !important;
-    }
+      left: unset !important;
+      right: 0px;
+  }
     .error_sub{
       left: 193px;
     }
