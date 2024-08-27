@@ -1447,6 +1447,7 @@
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #e5e5e5;
   padding-right: 125px;
+  max-width: 100%;
 }
 .error_sub {
   width: 363px;
