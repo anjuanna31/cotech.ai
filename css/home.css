@@ -269,7 +269,7 @@
   justify-content: flex-end;
 }
 .footer-menu a {
-  font: normal normal normal 13px/51px Poppins;
+  font: normal normal normal 13px/20px Poppins;
   letter-spacing: 0px;
   color: #717171;
   text-decoration: none;
@@ -277,14 +277,14 @@
 }
 .footer-menu a:hover {
   text-align: left;
-  font: normal normal normal 13px/51px Poppins;
+  font: normal normal normal 13px/20px Poppins;
   letter-spacing: 0px;
   color: #222222;
 }
 .copy-right {
   padding: 20px 0px 20px 0px;
   color: #717171;
-  font: normal normal normal 13px/51px Poppins;
+  font: normal normal normal 13px/20px Poppins;
 }
 .footer-info {
   background: #f8f9fa 0% 0% no-repeat padding-box;
@@ -491,6 +491,7 @@
   overflow: hidden;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
+  transition: all 200ms linear;
 }
 .accordion .accordion-content p {
   font: normal normal normal 16px/25px Poppins;
@@ -1310,7 +1311,7 @@
     flex-direction: row;
 }
   .copy-right {
-    font: normal normal normal 11px / 51px Poppins;
+    font: normal normal normal 11px / 20px Poppins;
   }
   .scroll-div-new .scroll-content {
     position: relative;
