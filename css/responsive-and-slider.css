@@ -1000,5 +1000,8 @@
       height: 90px;
      
   }
+  .footer .col-md-6{
+    padding: 0px;
+  }
   
   }
