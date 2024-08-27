@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log("Changing image src to:", imageSrc);
           imageElement.classList.remove("zoomin");
           imageElement.src = imageSrc;
-         alert()
+      
 
           // Force a reflow to reset the animation
           void imageElement.offsetWidth;
