@@ -660,7 +660,11 @@ a:hover{
   margin-bottom: 25px;
   display: flex;
 }
-
+.gj div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .menu-btn.sub {
   border: none;
   cursor: pointer;
