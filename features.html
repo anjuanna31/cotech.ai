@@ -399,7 +399,7 @@
     </div>
     <div class="container feat">
       <div class="content-accord-wrapper">
-        <div class="video-text-content">
+        <div class="video-text-content" id="capab">
           <div class="row">
             <div class="col-md-6 fadeup">
               <div class="bg-video bg-videolaunch">
@@ -652,7 +652,15 @@ function menu() {
       button.addEventListener('click', function() {
         const imageSrc = this.getAttribute('data-image-src');
         console.log("Changing image src to:", imageSrc);
+        imageElement.classList.remove("zoomin");
         imageElement.src = imageSrc;
+        void imageElement.offsetWidth;
+
+        imageElement.onload = () => {
+        
+            imageElement.classList.add("zoomin");
+        // 500 milliseconds = 0.5 seconds
+        };
         if(imageSrc){
         if(imageSrc=='https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/new-images/dtc.png'){
         imageElement.classList.add('predictive');
@@ -684,7 +692,15 @@ function menu() {
       button.addEventListener('click', function() {
         const imageSrc = this.getAttribute('data-image-src');
         console.log("Changing image src to:", imageSrc);
+        imageElement.classList.remove("zoomin");
         imageElement.src = imageSrc;
+        void imageElement.offsetWidth;
+
+        imageElement.onload = () => {
+        
+            imageElement.classList.add("zoomin");
+        // 500 milliseconds = 0.5 seconds
+        };
         if(imageSrc){
         if(imageSrc=='https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/new-images/liveandauto.png'){
         imageElement.classList.add('predictive');

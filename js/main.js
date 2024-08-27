@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log("Changing image src to:", imageSrc);
           imageElement.classList.remove("zoomin");
           imageElement.src = imageSrc;
-         
+         alert()
 
           // Force a reflow to reset the animation
           void imageElement.offsetWidth;
@@ -222,6 +222,10 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("bgVideoDiv not found");
     }
   }
+
+
+
+  // --------------feature page image loaded
   document.addEventListener("DOMContentLoaded", function () {
     const fadeElements = document.querySelectorAll(".fadeup");
 
