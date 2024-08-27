@@ -1075,6 +1075,13 @@ object-fit: cover;
   .end-to-end-box {
     height: auto !important;
 }
+.gj div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  flex-basis: 50%;
+}
 
 .abouhero-img {
   display: block;
