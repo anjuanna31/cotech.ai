@@ -1376,13 +1376,13 @@
     padding: 8px 11px 7px !important;
   }
   .reduction {
-    margin-top: 98px;
+    /* margin-top: 98px; */
   }
   .masksvg {
-    margin-top: 200px;
+    /* margin-top: 200px; */
   }
   .expertsvg {
-    margin-top: 27px;
+    /* margin-top: 27px; */
   }
   .scrollbehave {
     position: relative;
