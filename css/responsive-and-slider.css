@@ -522,6 +522,7 @@
   .aiassist-bg img {
     height: auto;
     max-height: 100%;
+    max-width: 100%;
 }
 .footer .row {
   display: inline-flex;
@@ -942,6 +943,7 @@
   height: auto;
   margin-top: 10px;
   margin-bottom: 20px;
+  max-width: 100%;
 }
 .book-a-demo {
   padding: 68px 20px;
