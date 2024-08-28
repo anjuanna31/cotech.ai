@@ -88,6 +88,9 @@
   flex-direction: column;
   justify-content: center;
 }
+.abouthead  .spl-accordian-wrapper {
+  height: 430px;
+}
 .spl-accordian-wrapper .accordion {
   margin: 0px;
   border: 1px solid #ddd;
@@ -119,6 +122,11 @@
   letter-spacing: 0px;
   color: #868686;
   margin: 1em 0;
+}
+#myForm #shape-2 {
+  background-color: #F9A8D4;
+  left: unset;
+  right: 100px;
 }
 .how-it-works {
   background: #fef7e0 0% 0% no-repeat padding-box;
@@ -254,6 +262,8 @@
   border-radius: 6px;
   margin-bottom: 20px;
   cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .webinar-video {
   height: 171px;
@@ -278,11 +288,16 @@
   text-decoration: none;
 }
 .webinar-content h5 {
-  font: normal normal 600 16px/25px Poppins;
-  letter-spacing: 0px;
-  color: #161617;
-  text-decoration: none;
-  height: 50px;
+  font: normal normal 600 15px / 25px Poppins;
+    letter-spacing: 0px;
+    color: #161617;
+    text-decoration: none;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 50px;
 }
 a {
   text-decoration: none;
@@ -439,13 +454,25 @@ a {
   font: normal normal 600 24px/30px Poppins;
   letter-spacing: 0px;
   color: #161617;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .blog-content p {
   font: normal normal normal 16px/28px Poppins;
   letter-spacing: 0.16px;
   color: #42526e;
   margin-bottom: 30px;
+}
+.blog-content h4{
+  font: normal normal 600 22px/24px Poppins;
+letter-spacing: 0px;
+color: #161617;
+margin-bottom: 20px;
+}
+.blog-content h5{
+  font: normal normal 600 20px/24px Poppins;
+letter-spacing: 0px;
+color: #161617;
+margin-bottom: 20px;
 }
 .webinar-co-box {
   max-width: 840px;
@@ -526,6 +553,7 @@ a:hover{
 .abouthead{
       text-align: center;
     max-width: 730px!important;
+    margin-bottom: 0px!important;
 }
 .core-p{
   font: normal normal normal 16px / 25px Poppins;
@@ -560,13 +588,13 @@ a:hover{
 .bg-videoinnovation{
   background-color: unset!important;
   position: relative;
-  height: 409px!important;
+  height: 430px!important;
 }
 
 .bg-videoinnovation img{
   object-fit: cover;
   height: 100%;
-  margin-top: 177px;
+  /* margin-top: 177px; */
   max-width: 100%;
 }
 .common-video-normal {
@@ -805,6 +833,7 @@ a:hover{
   .resone{
     display: flex;
     align-items: center;
+    padding: 15px;
   }
   .feature-img{
 object-fit: cover;

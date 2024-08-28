@@ -19,51 +19,73 @@ var app = new Vue({
       Submitloader: false,
       alreadysub: false,
       subcribeloader: false,
+      specialCharacter:false,
+      specialCharacter2:false
   
   
     },
     methods: {
       submit() {
-  
+
+        // Check if username is empty
         if (username.value.length == 0) {
           this.uname = true;
-        }
-        else {
+        } else {
           this.uname = false;
         }
+      
+        // Check if email is empty
         if (email.value.length == 0) {
           this.umail = true;
-  
-        }
-        else {
+        } else {
           this.umail = false;
         }
+      
+        // Check if company name is empty
         if (companyname.value.length == 0) {
           this.ucname = true;
-        }
-        else {
+        } else {
           this.ucname = false;
         }
-  
+      
+        // Email format validation
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (email.value != '') {
           if (email.value.match(mailformat)) {
             this.entervalid = false;
-          }
-          else {
+          } else {
             this.entervalid = true;
           }
         }
+      
+        // Restrict special characters in username
+        var usernameFormat = /^[a-zA-Z0-9_]+$/; // Only allows alphanumeric characters and underscores
+        if (username.value != '' && !username.value.match(usernameFormat)) {
+          this.uname = true; // Set this to true to show error message
+          console.log("Username contains invalid characters.");
+          this.specialCharacter=true
+          return; // Stop form submission
+        }
+
+        var usernameFormat2 = /^[a-zA-Z0-9_.-]+$/; // Only allows alphanumeric characters and underscores
+        if (companyname.value != '' && !companyname.value.match(usernameFormat2)) {
+          this.ucname = true; // Set this to true to show error message
+          console.log("compny name contains invalid characters.");
+          this.specialCharacter2=true
+          return; // Stop form submission
+        }
+      
+        // Check if any validation errors exist
         if (this.uname == true || this.umail == true || this.ucname == true || this.entervalid == true) {
           return;
         }
-        // (datas.contact_number_error == "") &&(datas.contact_number_error == "") &&(datas.country_code_error == "") &&
-        if ((username != "")) {
-  
+      
+        // If validation passes, proceed with submission
+        if (username.value != "") {
           var actvcls = document.getElementsByClassName("activess")[0].innerHTML;
-          // datas.email_send_msg = "";
           this.Submit = false;
           this.Submitloader = true;
+      
           $.post("https://app.xrmeet.io/ar_connect/xrmeet_contact",
             {
               username: username.value,
@@ -74,10 +96,9 @@ var app = new Vue({
             },
             function (result) {
               var parse_data = JSON.parse(result);
-              //console.log(parse_data);
-              var show = document.getElementById("submitted")
+              var show = document.getElementById("submitted");
+              
               if (parse_data.status == true) {
-  
                 app.message = '';
                 app.username = '';
                 app.email = '';
@@ -86,32 +107,24 @@ var app = new Vue({
                 username.value = '';
                 email.value = '';
                 companyname.value = '';
+      
                 if (show.style.display == "block") {
-  
                   setTimeout(function () {
                     var show = document.getElementById("submitted");
                     show.style.display = "none";
                     app.Submit = true;
                     app.Submitloader = false;
-                  }, 5000)
-  
+                  }, 5000);
                 }
-  
-              }
-              else {
-                console.log("errr")
+              } else {
+                console.log("Error in submission");
               }
             });
+        } else {
+          console.log("Error in submission");
         }
-        else {
-          console.log("errr")
-          // $("#status_msg").removeClass("success_msg_color");
-          // $("#status_msg").addClass("request-error");
-          // datas.email_send_msg = "Please fill in all the required fields and click  Submit";
-        }
-  
-  
       },
+      
      
       reset() {
         setTimeout(function () {

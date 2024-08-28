@@ -36,7 +36,9 @@
               <div class="menu-item">
                 <a href="./about.html"> About Us</a>
               </div>
-      
+              <div class="menu-item">
+                <a href="./blog.html"> Blog</a>
+              </div>
               <!-- <div class="menu-item hover-show-menu">
                 Resources
                 <div class="showdiv">
@@ -90,7 +92,7 @@
                     </div>
                 </div>
                 <div class="col-sm   one resone" style="margin-bottom: 50px;">
-                    <div class="color-box bounce2 demobounce" style="display: block;">
+                    <!-- <div class="color-box bounce2 demobounce" style="display: block;">
                         <div class="color-pink2">
                         </div>
                         <div class="color-pink">
@@ -98,13 +100,41 @@
                         <div class="color-pink3">
                         </div>
           
-                      </div>
-                    <form id="myForm" class="form1 fadeup">
+                      </div> -->
+                     
+                    <form id="myForm" class="form1 fadeup glass-box">
+                        <div id="shape-1" class="
+                        rounded-circle
+                        position-absolute
+                        opacity-70
+                        scale-up-center
+                        d-none d-md-block
+                        ">
+                    </div>
+                    <div id="shape-2" class="
+                        rounded-circle
+                        position-absolute
+                        opacity-70
+                        scale-up-center
+                        fade-delay-2000
+                        d-none d-md-block
+                        ">
+                    </div>
+                    <div id="shape-3" class="
+                        rounded-circle
+                        position-absolute
+                        opacity-70
+                        scale-up-center
+                        fade-delay-4000
+                        d-none d-md-block
+                        ">
+                    </div>
                         <div class="username">
                             <div class="text">
                                 <div class="username">Full Name</div>
                                 <input type="text" id="username" name="username" class="user" v-model="username">
                                 <div class="inv" v-show="uname && username.length==0">This field is required.</div>
+                                <div class="inv" v-show="uname && specialCharacter">This field contains invalid characters.</div>
                             </div>
                         </div>
                         <div class="email">
@@ -122,12 +152,13 @@
                                 <input type="text" id="companyname" name="companyname" class="user"
                                     v-model="companyname">
                                 <div class="inv" v-show="ucname && companyname.length==0 ">This field is required.</div>
+                                <div class="inv" v-show="ucname && specialCharacter2 ">This field contains invalid characters.</div>
 
                             </div>
                         </div>
                         <div class="requirement">
                             <div class="text">
-                                <div class="username">Requirement (Optional)</div>
+                                <div class="username">Requirement </div>
                                 <textarea id="w3review" v-model="message" style="max-width: 100%;" name="w3review" rows="4" cols="50"
                                     class="area user-area"></textarea>
 

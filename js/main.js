@@ -416,3 +416,22 @@ function updateActiveLine2() {
 };
 
 });
+
+
+const emailInput = document.getElementById('exampleInputEmail1');
+        const errorMessage = document.getElementById('error2');
+
+        // Simple email regex pattern for validation
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        // Add an event listener to the email input for real-time validation
+        emailInput.addEventListener('input', function() {
+            const email = emailInput.value;
+
+            // Check if the email matches the pattern
+            if (emailPattern.test(email)) {
+                errorMessage.style.display = 'none'; // Clear error message if valid
+            } else {
+              errorMessage.style.display = 'block';
+            }
+        });
