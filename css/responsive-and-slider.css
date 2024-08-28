@@ -849,6 +849,7 @@
     height: 100%; 
     scroll-snap-align: start; 
     padding: 20px;
+    transition: all 2s ease-in;
   }
   .lines2 {
     position: absolute;
@@ -906,6 +907,7 @@
     height: 100%; 
     scroll-snap-align: start; 
     padding: 20px;
+    transition: all 2s ease-in;
   }
   .lines22 {
     position: absolute;

@@ -395,6 +395,7 @@
   max-width: 100%;
   margin: auto;
   margin-bottom: 100px;
+  min-height: 265px;
 }
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5;
@@ -466,14 +467,16 @@
 }
 .accordion button[aria-expanded="true"] {
   color: #f84131;
+  transition: all 1s linear;
 }
 .accordion button[aria-expanded="true"] .icon::after {
   width: 0;
+  transition: all 1s linear;
 }
 .accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
   max-height:100%;
-  transition: all 200ms linear;
+  transition: all 1s linear;
   will-change: opacity, max-height;
   border-top: 1px solid #ddd;
   margin-left: -25px;
@@ -665,7 +668,7 @@
   flex-basis: 33.33%;
 }
 .new-item-box {
-  margin-bottom: -60px;
+  /* margin-bottom: -60px; */
 }
 .color-box {
   position: absolute;
@@ -1059,6 +1062,7 @@
 }
 .spl-accordian-wrapper .accordion .accordion-item button[aria-expanded="true"] {
   border-bottom: 0px solid #f84131;
+  transition: all 1s linear;
 }
 .spl-accordian-wrapper .accordion .accordion-content p {
   font: normal normal normal 16px / 25px Poppins;
@@ -1288,6 +1292,7 @@
   .accordion button[aria-expanded="true"] + .accordion-content {
     opacity: 1;
     max-height: 14em;
+    transition: all 1s linear;
   }
   .book-demo-box h2 {
     text-align: center;
@@ -1359,7 +1364,7 @@
     overflow: hidden;
     object-fit: fill;
     margin-left: unset;
-    margin-top: 126px;
+    /* margin-top: 126px; */
   }
   .line-container {
     position: absolute;
@@ -1517,4 +1522,8 @@
 }
 .scroll-div-new {
   max-height: 443px;
+}
+.mob-sli-2{
+  margin-top: 50px!important;
+  height: 600px!important;
 }

@@ -318,21 +318,31 @@ const sliderContainer2 = document.querySelector('.slider-container-new');
 const slider2 = document.querySelector('.slider2');
 const slides2 = document.querySelectorAll('.slide2');
 const lines2 = document.querySelectorAll('.line2');
-
+let isSliderVisible = false;
 let currentIndex = 0;
 let scrollTimeout = null;
 
 if (slider2) {
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      isSliderVisible = entry.isIntersecting;
+    });
+  }, { threshold: 0.5 }); // Adjust threshold as needed
+
+  observer.observe(slider2);
+
+
   slider2.addEventListener('wheel', (e) => {
     if (scrollTimeout) {
       clearTimeout(scrollTimeout);
     }
     scrollTimeout = setTimeout(() => {
-      if (e.deltaY > 0) {
+      if (e.deltaY > 2) {
         if (currentIndex < slides2.length - 1) {
           currentIndex++;
         }
-      } else if (e.deltaY < 0) {
+      } else if (e.deltaY < -2) {
         if (currentIndex > 0) {
           currentIndex--;
         }
@@ -344,7 +354,26 @@ if (slider2) {
   slider2.addEventListener('touchmove', () => {
     updateActiveLine();
   });
+  window.addEventListener('keydown', (e) => {
+    if (isSliderVisible) {
+    if (e.key === 'ArrowDown') {
+      if (currentIndex < slides2.length - 1) {
+        currentIndex++;
+        scrollToSlide(currentIndex);
+        updateActiveLine();
+      }
+    } else if (e.key === 'ArrowUp') {
+      if (currentIndex > 0) {
+        currentIndex--;
+        scrollToSlide(currentIndex);
+        updateActiveLine();
+      }
+    }
+  }
+  });
+  
 }
+
 
 
 function scrollToSlide(index) {
@@ -373,11 +402,19 @@ const sliderContainer22 = document.querySelector('.slider-container-new2');
 const slider22 = document.querySelector('.slider22');
 const slides22 = document.querySelectorAll('.slide22');
 const lines22 = document.querySelectorAll('.line22');
+let isSliderVisible2 = false;
 
 let currentIndex2 = 0;
 let scrollTimeout2 = null;
 
 if (slider22) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      isSliderVisible2 = entry.isIntersecting;
+    });
+  }, { threshold: 0.5 }); // Adjust threshold as needed
+
+  observer.observe(slider22);
   slider22.addEventListener('wheel', (e) => {
     if (scrollTimeout) {
       clearTimeout(scrollTimeout);
@@ -398,6 +435,23 @@ if (slider22) {
   });
   slider22.addEventListener('touchmove', () => {
     updateActiveLine2();
+  });
+  window.addEventListener('keydown', (e) => {
+    if (isSliderVisible2) {
+    if (e.key === 'ArrowDown') {
+      if (currentIndex2 < slides22.length - 1) {
+        currentIndex2++;
+        scrollToSlide2(currentIndex2);
+        updateActiveLine2();
+      }
+    } else if (e.key === 'ArrowUp') {
+      if (currentIndex2 > 0) {
+        currentIndex2--;
+        scrollToSlide2(currentIndex2);
+        updateActiveLine2();
+      }
+    }
+  }
   });
 }
 
@@ -420,6 +474,8 @@ function updateActiveLine2() {
     slide.classList.toggle('active', index === currentIndex2);
   });
 };
+
+
 
 });
 
@@ -452,7 +508,8 @@ function updateActiveLine2() {
         const emailPattern2 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
         // Add an event listener to the email input for real-time validation
-        emailInput2.addEventListener('input', function() {
+        if (emailInput2) {
+          emailInput2.addEventListener('input', function() {
             const email = emailInput2.value;
 
             // Check if the email matches the pattern
@@ -462,4 +519,6 @@ function updateActiveLine2() {
               errorMessage2.style.display = 'block';
             }
         });
+        }
+       
 
