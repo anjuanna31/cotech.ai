@@ -417,8 +417,8 @@ function updateActiveLine2() {
 
 });
 
-
-const emailInput = document.getElementById('exampleInputEmail1');
+// footer news leter subscription validation
+        const emailInput = document.getElementById('exampleInputEmail1');
         const errorMessage = document.getElementById('error2');
 
         // Simple email regex pattern for validation
@@ -435,3 +435,25 @@ const emailInput = document.getElementById('exampleInputEmail1');
               errorMessage.style.display = 'block';
             }
         });
+
+
+        //blog email validation
+
+        const emailInput2 = document.getElementById('exampleInputEmail12');
+        const errorMessage2 = document.getElementById('error22');
+
+        // Simple email regex pattern for validation
+        const emailPattern2 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        // Add an event listener to the email input for real-time validation
+        emailInput2.addEventListener('input', function() {
+            const email = emailInput2.value;
+
+            // Check if the email matches the pattern
+            if (emailPattern2.test(email)) {
+                errorMessage2.style.display = 'none'; // Clear error message if valid
+            } else {
+              errorMessage2.style.display = 'block';
+            }
+        });
+
