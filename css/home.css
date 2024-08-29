@@ -16,6 +16,9 @@ a:focus {
   padding: 15px;
   width: 1300px;
 }
+.header-menu a{
+  text-decoration: none;
+}
 .header {
   height: 72px;
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -69,7 +72,7 @@ a:focus {
   height: 3px;
   background-color: #ed2d25;
 }
-.menu-item a:hover  {
+.menu-item:hover  {
   color: #ed2d25;
   cursor: pointer;
 }
@@ -485,7 +488,8 @@ a:focus {
 .accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
   max-height:100%;
-  transition: all .3s linear;
+  height: 100%;
+  /* transition: all .3s linear; */
   /* will-change: opacity, max-height; */
   border-top: 1px solid #ddd;
   margin-left: -25px;
@@ -500,8 +504,9 @@ a:focus {
   border-top: 0px solid #ddd;
 }
 .accordion .accordion-content {
-  opacity: 0;
+  opacity: 1;
   max-height: 0;
+  height: 0px;
   overflow: hidden;
   /* transition: opacity 200ms linear, max-height 200ms linear; */
   /* will-change: opacity, max-height; */
