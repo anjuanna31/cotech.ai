@@ -9,6 +9,7 @@ var app = new Vue({
       email: '',
       mailvalue: '',
       umail: false,
+      umsg: false,
       companyname: '',
       ucname: false,
       entervalid: false,
@@ -39,6 +40,11 @@ var app = new Vue({
           this.umail = true;
         } else {
           this.umail = false;
+        }
+        if (this.message.length == 0) {
+          this.umsg=true
+        }else{
+          this.umsg=false
         }
       
         // Check if company name is empty
@@ -76,7 +82,7 @@ var app = new Vue({
         }
       
         // Check if any validation errors exist
-        if (this.uname == true || this.umail == true || this.ucname == true || this.entervalid == true) {
+        if (this.uname == true || this.umail == true || this.ucname == true || this.entervalid == true || this.umsg ==true) {
           return;
         }
       
@@ -85,32 +91,39 @@ var app = new Vue({
           var actvcls = document.getElementsByClassName("activess")[0].innerHTML;
           this.Submit = false;
           this.Submitloader = true;
-      
-          $.post("https://app.xrmeet.io/ar_connect/xrmeet_contact",
-            {
-              username: username.value,
-              contact_user_email: email.value,
-              company_name: companyname.value,
-              message: this.message,
-              technician_number: actvcls,
-            },
-            function (result) {
-              var parse_data = JSON.parse(result);
-              var show = document.getElementById("submitted");
+          const formData = new FormData();
+          formData.append('full_name', username.value);
+          formData.append('email', email.value);
+          formData.append('company_name', companyname.value);
+          formData.append('requirement', this.message);
+          formData.append('company_size', actvcls);
+        
+          $.ajax({
+            url: "https://api.cotech.ai/website",
+            type: "POST",
+            data: formData,
+            processData: false,  // prevent jQuery from converting the FormData object into a string
+            contentType: false,  // prevent jQuery from overriding the content type
+            success: function(result) {
+              console.log(result);
+              // var parse_data = JSON.parse(result);
+              // console.log(parse_data);
               
-              if (parse_data.status == true) {
+            
+              var show = document.getElementById("submitted");
+        
+              if (result.status == true) {
                 app.message = '';
                 app.username = '';
                 app.email = '';
                 app.companyname = '';
-                show.style.display = "block";
+                show.style.display = "flex";
                 username.value = '';
                 email.value = '';
                 companyname.value = '';
-      
-                if (show.style.display == "block") {
-                  setTimeout(function () {
-                    var show = document.getElementById("submitted");
+                app.Submitloader = false;
+                if (show.style.display == "flex") {
+                  setTimeout(function() {
                     show.style.display = "none";
                     app.Submit = true;
                     app.Submitloader = false;
@@ -119,10 +132,15 @@ var app = new Vue({
               } else {
                 console.log("Error in submission");
               }
-            });
+            },
+            error: function() {
+              console.log("Error in submission");
+            }
+          });
         } else {
           console.log("Error in submission");
         }
+        
       },
       
      

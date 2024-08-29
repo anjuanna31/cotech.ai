@@ -17,8 +17,12 @@ function menu() {
 const items = document.querySelectorAll("#acordian1 button");
 const items2 = document.querySelectorAll("#acordian2 button");
 const items3 = document.querySelectorAll("#acordian3 button");
+const items4 = document.querySelectorAll("#acordian4 button");
+
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
 function toggleAccordion() {
   const itemToggle = this.getAttribute("aria-expanded");
 
@@ -59,9 +63,24 @@ function toggleAccordion3() {
   // }
 }
 
+function toggleAccordion4() {
+  const itemToggle = this.getAttribute("aria-expanded");
+
+  for (i = 0; i < items4.length; i++) {
+    items4[i].setAttribute("aria-expanded", "false");
+  }
+
+  if (itemToggle == "false") {
+    setTimeout(() => {
+      this.setAttribute("aria-expanded", "true");
+  }, 300); 
+  }
+}
+
 items.forEach((item) => item.addEventListener("click", toggleAccordion));
 items2.forEach((item) => item.addEventListener("click", toggleAccordion2));
 items3.forEach((item) => item.addEventListener("click", toggleAccordion3));
+items4.forEach((item) => item.addEventListener("click", toggleAccordion4));
 
 document.addEventListener("DOMContentLoaded", function () {
   const lazyLoadVideos = document.querySelectorAll("video.lazy-load");
@@ -482,14 +501,17 @@ function updateActiveLine2() {
 // footer news leter subscription validation
         const emailInput = document.getElementById('exampleInputEmail1');
         const errorMessage = document.getElementById('error2');
-
+        const successDiv = document.getElementById("subscribe");
+        const emailAlreadyhaveError = document.getElementById("alreadyAdded");
         // Simple email regex pattern for validation
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
         // Add an event listener to the email input for real-time validation
         emailInput.addEventListener('input', function() {
             const email = emailInput.value;
-
+            errorMessage.style.display = 'none';
+            successDiv.style.display = "none";
+            emailAlreadyhaveError.style.display = "none";
             // Check if the email matches the pattern
             if (emailPattern.test(email)) {
                 errorMessage.style.display = 'none'; // Clear error message if valid
@@ -503,7 +525,8 @@ function updateActiveLine2() {
 
         const emailInput2 = document.getElementById('exampleInputEmail12');
         const errorMessage2 = document.getElementById('error22');
-
+        const successDiv2 = document.getElementById("subscribe22");
+        const emailAlreadyhaveError2 = document.getElementById("alreadyAdded22");
         // Simple email regex pattern for validation
         const emailPattern2 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
@@ -511,14 +534,177 @@ function updateActiveLine2() {
         if (emailInput2) {
           emailInput2.addEventListener('input', function() {
             const email = emailInput2.value;
-
+            errorMessage2.style.display = 'none';
+            successDiv2.style.display = "none";
+            emailAlreadyhaveError2.style.display = "none";
             // Check if the email matches the pattern
             if (emailPattern2.test(email)) {
                 errorMessage2.style.display = 'none'; // Clear error message if valid
             } else {
               errorMessage2.style.display = 'block';
+              successDiv2.style.display = 'none';
             }
         });
         }
+
+
+
+        //email subscription code
+
+
+
+        async function  subscribeEmail() {
+         
+          
+          let email = document.getElementById("exampleInputEmail1").value;
+          let emailInput = document.getElementById("exampleInputEmail1");
+          const successDiv = document.getElementById("subscribe");
+          const failDiv = document.getElementById("error2");
+          const loader = document.getElementById("loaderdiv");
+          const emailAlreadyhaveError = document.getElementById("alreadyAdded");
+
+          // Basic email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+              // failDiv.textContent = "Invalid email format.";
+              failDiv.style.display = "block";
+              successDiv.style.display = "none";
+              return;
+          }
+          loader.style.display = "inline-block";
+          try {
+            const formData = new FormData();
+            formData.append('email', email);
+              
+              $.ajax({
+                url: "https://api.cotech.ai/website/subscribe",
+                type: "POST",
+                data: formData,
+                processData: false, 
+                contentType: false,  
+                success: function(result) {
+                  console.log(result);
+                  
+                  if (result.status == true) {
+                    successDiv.style.display = "flex";
+                  failDiv.style.display = "none";
+                  loader.style.display = "none";
+                  emailAlreadyhaveError.style.display = "none";
+                   emailInput.value = ''
+                  if (successDiv.style.display == "block") {
+                    setTimeout(function() {
+                      successDiv.style.display = "none";
+                      emailAlreadyhaveError.style.display = "none";
+                    }, 5000);
+                  }
+                  } else {
+                    // console.log(result.message);
+                    // console.log("Email already added to subscription list");
+                    emailInput.value = ''
+                    // if (result.message=="Email already added to subscription list") {
+                      loader.style.display = "none";
+                      emailAlreadyhaveError.style.display = "block";
+                      console.log("Error in submission");
+                    // }
+                   
+                  }
+                },
+                error: function() {
+                  console.log("Error in submission");
+                  loader.style.display = "none";
+                  successDiv.style.display = "none";
+                  failDiv.style.display = "block";
+                }
+              });
+              
+          } catch (error) {
+              failDiv.textContent = error.message;
+              failDiv.style.display = "block";
+              successDiv.style.display = "none";
+              loader.style.display = "none";
+              emailAlreadyhaveError.style.display = "none";
+               emailInput.value = ''
+          }
+      };
+
+
+
+      // blog emmail subscribe
+
+
+      async function  subscribeEmail2() {
+         
+          
+        let email2 = document.getElementById("exampleInputEmail12").value;
+        let emailInput2 = document.getElementById("exampleInputEmail12");
+        const successDiv = document.getElementById("subscribe22");
+        const failDiv = document.getElementById("error22");
+        const loader = document.getElementById("loaderdiv22");
+        const emailAlreadyhaveError = document.getElementById("alreadyAdded22");
+
+        // Basic email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email2)) {
+            // failDiv.textContent = "Invalid email format.";
+            failDiv.style.display = "block";
+            successDiv.style.display = "none";
+            return;
+        }
+        loader.style.display = "inline-block";
+        try {
+          const formData = new FormData();
+          formData.append('email', email2);
+            
+            $.ajax({
+              url: "https://api.cotech.ai/website/subscribe",
+              type: "POST",
+              data: formData,
+              processData: false, 
+              contentType: false,  
+              success: function(result) {
+                console.log(result);
+                
+                if (result.status == true) {
+                  successDiv.style.display = "flex";
+                failDiv.style.display = "none";
+                loader.style.display = "none";
+                emailAlreadyhaveError.style.display = "none";
+                 emailInput2.value = ''
+                if (successDiv.style.display == "block") {
+                  setTimeout(function() {
+                    successDiv.style.display = "none";
+                    emailAlreadyhaveError.style.display = "none";
+                  }, 5000);
+                }
+                } else {
+                  // console.log(result.message);
+                  // console.log("Email already added to subscription list");
+                  emailInput2.value = ''
+                  // if (result.message=="Email already added to subscription list") {
+                    loader.style.display = "none";
+                    emailAlreadyhaveError.style.display = "block";
+                    console.log("Error in submission");
+                  // }
+                 
+                }
+              },
+              error: function() {
+                console.log("Error in submission");
+                loader.style.display = "none";
+                successDiv.style.display = "none";
+                failDiv.style.display = "block";
+              }
+            });
+            
+        } catch (error) {
+            failDiv.textContent = error.message;
+            failDiv.style.display = "block";
+            successDiv.style.display = "none";
+            loader.style.display = "none";
+            emailAlreadyhaveError.style.display = "none";
+             emailInput2.value = ''
+        }
+    };
+     
        
 

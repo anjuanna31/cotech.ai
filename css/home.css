@@ -46,7 +46,7 @@
 }
 .menu-item {
   padding: 24px 30px;
-  cursor: pointer;
+  
   font: normal normal medium 16px/19px Roboto;
   letter-spacing: 0px;
   color: #222222;
@@ -64,8 +64,9 @@
   height: 3px;
   background-color: #ed2d25;
 }
-.menu-item:hover a {
+.menu-item a:hover  {
   color: #ed2d25;
+  cursor: pointer;
 }
 .demobounce {
   right: -96px !important;
@@ -395,7 +396,10 @@
   max-width: 100%;
   margin: auto;
   margin-bottom: 100px;
-  min-height: 265px;
+  min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5;
@@ -467,11 +471,11 @@
 }
 .accordion button[aria-expanded="true"] {
   color: #f84131;
-  transition: all 1s linear;
+  transition: all .5s linear;
 }
 .accordion button[aria-expanded="true"] .icon::after {
   width: 0;
-  transition: all 1s linear;
+  transition: all .5s linear;
 }
 .accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
@@ -1042,6 +1046,7 @@
   border: 1px solid #ddd;
   border-radius: 20px;
   padding: 0px 0px;
+  transition: all .5s ease-in;
 }
 .spl-accordian-wrapper h5 {
   font: normal normal 600 16px/60px Poppins;
@@ -1053,6 +1058,7 @@
   font: normal normal 600 16px/22px Poppins;
   letter-spacing: 0px;
   color: #222222;
+  cursor: pointer;
 }
 .spl-accordian-wrapper .accordion button[aria-expanded="true"] {
   font: normal normal bold 20px/26px Poppins;
@@ -1410,7 +1416,7 @@
   .color-box {
     display: none;
   }
-}
+
 .succ_sub {
   text-align: center;
   width: 412px;
@@ -1526,4 +1532,13 @@
 .mob-sli-2{
   margin-top: 50px!important;
   height: 600px!important;
+}
+.error_sub span{
+  font-size: 12px;
+}
+.succ_sub svg{
+  margin-right: 10px;
+}
+.homeaccordian{
+  min-height: 280px;
 }
