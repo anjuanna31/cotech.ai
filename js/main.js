@@ -31,9 +31,9 @@ function toggleAccordion() {
   }
 
   // if (itemToggle == "false") {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.setAttribute("aria-expanded", "true");
-  }, 300); 
+  // }, 300); 
   // }/
 }
 function toggleAccordion2() {
@@ -44,9 +44,9 @@ function toggleAccordion2() {
   }
 
   // if (itemToggle == "false") {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.setAttribute("aria-expanded", "true");
-  }, 300); 
+  // }, 300); 
   // }
 }
 function toggleAccordion3() {
@@ -57,9 +57,9 @@ function toggleAccordion3() {
   }
 
   // if (itemToggle == "false") {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.setAttribute("aria-expanded", "true");
-  }, 300); 
+  // }, 300); 
   // }
 }
 

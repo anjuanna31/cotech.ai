@@ -112,8 +112,8 @@
   font: normal normal bold 20px/26px Poppins;
   letter-spacing: 0px;
   color: #222222;
-  padding-bottom: 0px;
-  transition: all .5s ease-in;
+  /* padding-bottom: 0px; */
+  /* transition: all .5s ease-in; */
 }
 .spl-accordian-wrapper .accordion .accordion-item button[aria-expanded="true"] {
   border-bottom: 0px solid #f84131;
@@ -122,7 +122,7 @@
   font: normal normal normal 16px / 25px Poppins;
   letter-spacing: 0px;
   color: #868686;
-  margin: 1em 0;
+  margin: -7px 0px 1rem;
 }
 #myForm #shape-2 {
   background-color: #F9A8D4;

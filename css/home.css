@@ -401,10 +401,10 @@ a:focus {
   max-width: 100%;
   margin: auto;
   margin-bottom: 100px;
-  min-height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  /* min-height: 350px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
 }
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5;
@@ -476,17 +476,17 @@ a:focus {
 }
 .accordion button[aria-expanded="true"] {
   color: #f84131;
-  transition: all .5s linear;
+  /* transition: all .5s linear; */
 }
 .accordion button[aria-expanded="true"] .icon::after {
   width: 0;
-  transition: all .5s linear;
+  /* transition: all .5s linear; */
 }
 .accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
   max-height:100%;
-  transition: all 1s linear;
-  will-change: opacity, max-height;
+  transition: all .3s linear;
+  /* will-change: opacity, max-height; */
   border-top: 1px solid #ddd;
   margin-left: -25px;
   padding-left: 25px;
@@ -503,9 +503,9 @@ a:focus {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 200ms linear, max-height 200ms linear;
-  will-change: opacity, max-height;
-  transition: all 200ms linear;
+  /* transition: opacity 200ms linear, max-height 200ms linear; */
+  /* will-change: opacity, max-height; */
+  /* transition: all 200ms linear; */
 }
 .accordion .accordion-content p {
   font: normal normal normal 16px/25px Poppins;
@@ -557,8 +557,8 @@ a:focus {
 }
 @keyframes zoomIn {
   from {
-    transform: scale(0);
-    opacity: 0;
+    transform: scale(.5);
+    opacity: .5;
   }
   to {
     transform: scale(1);
@@ -567,7 +567,7 @@ a:focus {
 }
 .zoomin {
   display: inline-block;
-  animation: zoomIn 0.5s ease-out forwards;
+  animation: fadeUp 0.5s ease-out forwards;
 }
 .animated-text {
   display: inline-block;
@@ -1052,7 +1052,7 @@ a:focus {
   border: 1px solid #ddd;
   border-radius: 20px;
   padding: 0px 0px;
-  transition: all .5s ease-in;
+  /* transition: all .5s ease-in; */
 }
 .spl-accordian-wrapper h5 {
   font: normal normal 600 16px/60px Poppins;
@@ -1070,17 +1070,17 @@ a:focus {
   font: normal normal bold 20px/26px Poppins;
   letter-spacing: 0px;
   color: #222222;
-  padding-bottom: 0px;
+  /* padding-bottom: 0px; */
 }
 .spl-accordian-wrapper .accordion .accordion-item button[aria-expanded="true"] {
   border-bottom: 0px solid #f84131;
-  transition: all 1s linear;
+  /* transition: all 1s linear; */
 }
 .spl-accordian-wrapper .accordion .accordion-content p {
   font: normal normal normal 16px / 25px Poppins;
   letter-spacing: 0px;
   color: #868686;
-  margin: 1em 0;
+  margin: -5px 0px 1rem;
 }
 .sc-hide {
   display: none;
@@ -1304,7 +1304,7 @@ a:focus {
   .accordion button[aria-expanded="true"] + .accordion-content {
     opacity: 1;
     max-height: 14em;
-    transition: all 1s linear;
+    /* transition: all 1s linear; */
   }
   .book-demo-box h2 {
     text-align: center;
@@ -1546,5 +1546,5 @@ a:focus {
   margin-right: 10px;
 }
 .homeaccordian{
-  min-height: 280px;
+  /* min-height: 280px; */
 }
