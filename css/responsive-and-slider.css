@@ -1036,11 +1036,20 @@
   
   }
 
-  @media screen and (min-width: 1500px) {
+  @media screen and (min-width: 1600px) {
     .container{
       width: 1400px;
     }
-;.header{
-max-width: 1430px;
+.header{
+width: 1370px;
     }
+    .hero-bg {
+      height: 104%;
+      width: auto;
+      position: absolute;
+      right: 0;
+      top: -21px;
+      bottom: 0;
+      max-height: fit-content;
+  }
   }
