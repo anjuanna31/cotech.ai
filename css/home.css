@@ -1555,6 +1555,6 @@ a:focus {
 }
 @media screen and (min-height:800px) {
   .hero-box{
-    max-height: 730px;
+    max-height: 560px;
   }
 }

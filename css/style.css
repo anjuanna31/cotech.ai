@@ -1186,7 +1186,10 @@ object-fit: cover;
   width: 100px;
   flex-basis: 50%;
 }
-
+.error_sub {
+  width: auto !important;
+  padding: 8px 7px 7px !important;
+}
 .abouhero-img {
   display: block;
   width: 100%;
