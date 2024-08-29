@@ -42,7 +42,7 @@
     width: 91%!important;
   }
   #slide2 .slideimg,#slide3 .slideimg{
-      width: 76% !important;
+      /* width: 76% !important; */
   }
   .footer{
     position: absolute;
@@ -1034,4 +1034,13 @@
     padding: 0px;
   }
   
+  }
+
+  @media screen and (min-width: 1500px) {
+    .container{
+      width: 1400px;
+    }
+;.header{
+max-width: 1430px;
+    }
   }

@@ -1553,3 +1553,8 @@ a:focus {
 .homeaccordian{
   /* min-height: 280px; */
 }
+@media screen and (min-height:800px) {
+  .hero-box{
+    max-height: 730px;
+  }
+}

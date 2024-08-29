@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const imageElement = bgVideoDiv.querySelector("img");
       imageElement.src =
-        "https://cotech.s3.ap-south-1.amazonaws.com/cotech-website/images/new-images/AIAssistant.png";
+        "https://storage.cotech.ai/cotech-website/images/images/AI-Assistant-min.png";
 
       accordionButtons.forEach((button) => {
         button.addEventListener("click", function () {
