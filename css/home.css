@@ -3,6 +3,10 @@
   margin: 0px;
   box-sizing: border-box;
 }
+a:focus {
+  outline: none;
+  box-shadow: none;
+}
 .container {
   max-width: 100%;
   margin-left: auto;

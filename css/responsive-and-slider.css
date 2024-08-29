@@ -178,6 +178,19 @@
   .rounded-circle{
     border-radius: 50%;
   }
+  @media screen and (max-width:1367px) {
+
+    .hero-bg {
+     
+      top: -17px;
+     
+  }
+  .scroll-parent {
+    position: absolute;
+    right: -10px;
+    top: 53%;
+}
+  }
   @media screen and (max-width:1025px) {
     .hero-bg {
       height: 58%;
