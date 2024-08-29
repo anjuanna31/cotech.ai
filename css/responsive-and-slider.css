@@ -327,6 +327,7 @@
       right: 20px;
       font-size: 24px;
       cursor: pointer;
+      text-decoration: none;
     }
     .resp-menu {
       position: absolute;
@@ -985,6 +986,9 @@
   padding: 68px 20px;
   background: transparent linear-gradient(269deg, #fef7e042 0%, #fef7e0 52%, #fef7e033 100%) 0% 0% no-repeat padding-box;
   margin-bottom: 30px;
+}
+.scroll-parent{
+  display: none;
 }
 .feature-hero-content {
   color: white;
