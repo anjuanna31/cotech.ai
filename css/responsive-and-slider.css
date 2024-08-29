@@ -517,10 +517,10 @@
     right: 0 !important;
   }
   #shape-1, #shape-2, #shape-3 {
-    min-width: 120px;
-        height: 120px;
+    min-width: 150px;
+        height: 150px;
         mix-blend-mode: multiply;
-        filter: blur(23px);
+        filter: blur(40px);
         opacity: 0.6;
         display: block;
   }
