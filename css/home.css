@@ -6,6 +6,7 @@
 a:focus {
   outline: none;
   box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .container {
   max-width: 100%;
@@ -937,6 +938,7 @@ a:focus {
   letter-spacing: 0px;
   color: #222222;
   text-decoration: none;
+  pointer-events: auto;
 }
 .menu-item.active a {
   color: #ed2d25;

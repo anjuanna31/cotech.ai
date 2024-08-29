@@ -532,6 +532,10 @@
     background-color: #F9A8D4;
     left: 202px;
   }
+  .mob-sli-2{
+    margin-top: 0px;
+    height: auto!important;
+  }
   #shape-3 {
     background-color: #FCD34D;
     left: 90px;
@@ -962,6 +966,7 @@
   }
   .mob-sli-2{
     margin-top: 0px;
+    height: auto!important;
   }
   .slide{
     padding: 0px;
