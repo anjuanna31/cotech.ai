@@ -1199,6 +1199,10 @@ object-fit: cover;
 .kk{
   padding: 0px 0px;
 }
+.blog-single {
+  margin-top: 60px;
+  margin-bottom: 29px;
+}
 .about-hero {
   background: #fff1e4 0% 0% no-repeat padding-box;
   border-radius: 23px;
